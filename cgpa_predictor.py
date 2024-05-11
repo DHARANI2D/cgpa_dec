@@ -59,6 +59,8 @@ def main():
         cgpa = calculate_cgpa(subjects)
         st.success(f"Your VI SEM GPA is: {cgpa:.2f}")
 
+        st.text("Made with 🧡 by DHARANI2D")
+
     st.text("Made with 🧡 by DHARANI2D")
 
 if __name__ == "__main__":
