@@ -26,8 +26,6 @@ def main():
 
     st.sidebar.header("User Input")
     
-    pcgpa = st.sidebar.number_input("Enter Previous CGPA", min_value=0.0, max_value=10.0, value=0.0, step=0.1)
-
     default_subjects = [
         ("ETHICAL HACKING", 3, 'O'),
         ("SERVERLESS COMPUTING", 3, 'O'),
