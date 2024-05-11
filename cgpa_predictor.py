@@ -30,7 +30,7 @@ def main():
     st.sidebar.header("User Input")
     
     default_subjects = [
-        ("ETHICAL HACKING", 3, 'O'),
+        ("ETHICAL HACKING/BLOCKCHAIN TECHNOLOGY", 3, 'O'),
         ("SERVERLESS COMPUTING", 3, 'O'),
         ("PRINCIPLES OF COMPILER DESIGN", 3, 'O'),
         ("CRYPTOGRAPHY AND NETWORK SECURITY", 3, 'O'),
