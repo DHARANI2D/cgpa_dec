@@ -57,7 +57,7 @@ def main():
 
     if st.sidebar.button("Calculate CGPA"):
         cgpa = calculate_cgpa(subjects)
-        st.success(f"Your CGPA is: {cgpa:.2f}")
+        st.success(f"Your VI SEM GPA is: {cgpa:.2f}")
 
     st.text("Made with 🧡 by DHARANI2D")
 
