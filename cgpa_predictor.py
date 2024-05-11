@@ -29,15 +29,14 @@ def main():
     pcgpa = st.sidebar.number_input("Enter Previous CGPA", min_value=0.0, max_value=10.0, value=0.0, step=0.1)
 
     default_subjects = [
-        ("APP DEVELOPMENT", 3, 'O'),
-        ("DISASTER MANAGEMENT", 3, 'O'),
-        ("OBJECT ORIENTED ANALYSIS AND DESIGN", 4, 'O'),
-        ("COMPUTER NETWORKS", 4, 'O'),
-        ("MINI PROJECT", 1, 'O'),
-        ("COMPUTER NETWORKS LABORATORY", 1, 'O'),
-        ("SOFTWARE PROJECT MANAGEMENT", 3, 'O'),
-        ("MICROCONTROLLERS AND EMBEDDED SYSTEMS", 4, 'O'),
-        ("SOFT SKILLS", 1, 'O')
+        ("ETHICAL HACKING", 3, 'O'),
+        ("SERVERLESS COMPUTING", 3, 'O'),
+        ("PRINCIPLES OF COMPILER DESIGN", 3, 'O'),
+        ("CRYPTOGRAPHY AND NETWORK SECURITY", 3, 'O'),
+        ("ARTIFICIAL INTELLIGENCE", 3, 'O'),
+        ("COMPILER DESIGN LABORATORY", 1.5, 'O'),
+        ("ARTIFICIAL INTELLIGENCE LABORATORY", 1, 'O'),
+        ("ADVANCED APPLICATION DEVELOPMENT", 3, 'O')
     ]
 
     subjects = []
@@ -55,10 +54,8 @@ def main():
         grade = GRADE_MAP.get(grade_input.upper(), 0)
         subjects.append((subject_name, credit, grade))
 
-    if st.sidebar.button("Calculate CGPA"):
-        cgpa = calculate_cgpa(subjects)
-        ccgpa = (cgpa + pcgpa) / 2
-        st.success(f"Your CGPA is: {ccgpa:.2f}")
+    if st.sidebar.button("Calculate GPA"):
+        st.success(f"Your CGPA is: {pcgpa:.2f}")
 
     st.text("Made with 🧡 by DHARANI2D")
 
