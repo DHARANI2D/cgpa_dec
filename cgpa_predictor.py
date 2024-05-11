@@ -18,6 +18,9 @@ def calculate_cgpa(subjects):
         total_credits += credit
         total_points += credit * grade
 
+    if total_credits == 0:
+        return 0.0
+    
     cgpa = total_points / total_credits
     return cgpa
 
@@ -52,8 +55,9 @@ def main():
         grade = GRADE_MAP.get(grade_input.upper(), 0)
         subjects.append((subject_name, credit, grade))
 
-    if st.sidebar.button("Calculate GPA"):
-        st.success(f"Your CGPA is: {pcgpa:.2f}")
+    if st.sidebar.button("Calculate CGPA"):
+        cgpa = calculate_cgpa(subjects)
+        st.success(f"Your CGPA is: {cgpa:.2f}")
 
     st.text("Made with 🧡 by DHARANI2D")
 
